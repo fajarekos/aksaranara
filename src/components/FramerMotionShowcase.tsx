@@ -16,25 +16,25 @@ const effectItems = [
 export function FramerMotionShowcase() {
   return (
     <MotionDiv
-      className="w-full max-w-lg rounded-2xl border border-zinc-200/80 bg-white p-6 shadow-lg shadow-zinc-200/50 ring-1 ring-zinc-100 dark:border-zinc-800 dark:bg-zinc-950 dark:shadow-black/40 dark:ring-zinc-800"
+      className="w-full rounded-2xl border border-gray-200 bg-white p-6 shadow-lg shadow-gray-200/50 ring-1 ring-gray-100"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-60px" }}
       variants={fadeUp}
     >
       <div className="flex flex-wrap items-center gap-2">
-        <span className="inline-flex items-center rounded-full bg-violet-600/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-violet-700 dark:bg-violet-500/15 dark:text-violet-300">
+        <span className="inline-flex items-center rounded-full bg-blue-600/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
           Framer Motion
         </span>
-        <span className="text-xs text-zinc-500 dark:text-zinc-400">
+        <span className="text-xs text-gray-500">
           terpasang di proyek ini
         </span>
       </div>
 
-      <h2 className="mt-4 text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
+      <h2 className="mt-4 text-xl font-semibold tracking-tight text-gray-900">
         Kartu demo animasi
       </h2>
-      <p className="mt-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+      <p className="mt-1 text-sm leading-relaxed text-gray-600">
         Beberapa pola animasi umum: masuk saat terlihat, urutan anak, interaksi
         hover/tap, spring, loop, dan drag.
       </p>
@@ -50,17 +50,17 @@ export function FramerMotionShowcase() {
           <motion.li
             key={item.key}
             variants={fadeIn}
-            className="rounded-lg border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300"
+            className="rounded-lg border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-medium text-gray-700"
           >
             {item.label}
           </motion.li>
         ))}
       </motion.ul>
 
-      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <motion.div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <motion.button
           type="button"
-          className="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-4 py-2.5 text-sm font-medium text-white shadow-md transition-colors hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
+          className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-medium text-white shadow-md transition-colors hover:bg-blue-700"
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -70,29 +70,29 @@ export function FramerMotionShowcase() {
 
         <div className="flex items-center gap-3">
           <motion.span
-            className="relative flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-fuchsia-500 text-xs font-bold text-white shadow-md"
+            className="relative flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-xs font-bold text-white shadow-md"
             animate={{ scale: [1, 1.08, 1], rotate: [0, 4, -4, 0] }}
             transition={{ repeat: Infinity, duration: 2.4, ease: "easeInOut" }}
           >
             FM
           </motion.span>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
+          <p className="text-xs text-gray-500">
             Loop dengan{" "}
-            <code className="rounded bg-zinc-100 px-1 py-0.5 text-[0.65rem] text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200">
+            <code className="rounded bg-blue-50 px-1 py-0.5 text-[0.65rem] text-blue-800">
               animate
             </code>
           </p>
         </div>
-      </div>
+      </motion.div>
 
       <motion.div
-        className="mt-6 cursor-grab rounded-xl border border-dashed border-zinc-300 bg-zinc-50/80 px-4 py-3 active:cursor-grabbing dark:border-zinc-700 dark:bg-zinc-900/60"
+        className="mt-6 cursor-grab rounded-xl border border-dashed border-blue-200 bg-blue-50/50 px-4 py-3 active:cursor-grabbing"
         drag="x"
         dragConstraints={{ left: -72, right: 72 }}
         dragElastic={0.12}
-        whileDrag={{ scale: 1.02, boxShadow: "0 12px 40px -12px rgb(24 24 27 / 0.35)" }}
+        whileDrag={{ scale: 1.02, boxShadow: "0 12px 40px -12px rgb(37 99 235 / 0.25)" }}
       >
-        <p className="text-center text-sm text-zinc-600 dark:text-zinc-400">
+        <p className="text-center text-sm text-gray-600">
           Seret blok ini secara horizontal ↑
         </p>
       </motion.div>

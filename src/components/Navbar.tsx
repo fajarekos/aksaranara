@@ -17,14 +17,12 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur-md">
       <nav
         className="mx-auto flex w-full items-center justify-between px-6 py-4 lg:px-12"
-        aria-label="Main navigation"
-      >
+        aria-label="Main navigation">
         <a
           href="#about"
           className="text-lg font-semibold tracking-tight text-gray-900"
-          onClick={() => setOpen(false)}
-        >
-          Fajarekos
+          onClick={() => setOpen(false)}>
+          Fajar Eko Susilo
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -32,8 +30,7 @@ export function Navbar() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-blue-50 hover:text-blue-600"
-              >
+                className="rounded-lg px-3 py-2 text-sm font-medium text-gray-600 transition-colors hover:bg-blue-50 hover:text-blue-600">
                 {item.label}
               </a>
             </li>
@@ -42,27 +39,24 @@ export function Navbar() {
 
         <a
           href="#contact"
-          className="hidden rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 md:inline-flex"
-        >
+          className="hidden rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 md:inline-flex">
           Contact Me
         </a>
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 md:hidden"
+          className="inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-rose-100 md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((prev) => !prev)}
-        >
+          onClick={() => setOpen((prev) => !prev)} >
           <svg
             className="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            aria-hidden
-          >
+            aria-hidden>
             {open ? (
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -71,6 +65,8 @@ export function Navbar() {
           </svg>
         </button>
       </nav>
+
+      {/* For mobile view */}
 
       {open && (
         <div

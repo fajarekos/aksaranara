@@ -1,30 +1,85 @@
-import { SectionHeading } from "@/components/ui/SectionHeading";
+"use client";
+
+import { motion } from "framer-motion";
+import { fadeUp } from "@/lib/animations"; 
+import Link from "next/link";
 
 export function AboutSection() {
   return (
-    <section
+    <section 
       id="about"
-      className="scroll-mt-20 w-full border-b border-gray-200 bg-white py-16 lg:py-24"
-    >
-      <div className="w-full px-6 lg:px-12">
-        <SectionHeading
-          label="About"
-          title="Frontend Engineer & Product Manager"
-          description="Building thoughtful digital products at the intersection of engineering and product strategy."
-        />
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-          <p className="text-base leading-relaxed text-gray-600 sm:text-lg">
-            I&apos;m Fajarekos — based in Indonesia. I work on user-facing products and
-            internal tools, from discovery and roadmap to shipped UI. I care about clear
-            UX, maintainable frontends, and outcomes that teams can measure.
-          </p>
-          <p className="text-base leading-relaxed text-gray-600 sm:text-lg">
-            Recent focus: B2B platforms, identity and e-signature at scale, and ops
-            dashboards. I collaborate closely with design, backend, and stakeholders to
-            deliver reliable experiences end to end.
-          </p>
+      className="relative flex min-h-screen flex-col items-center justify-center px-6 pb-16 pt-24 text-center">
+ 
+  
+      {/* Avatar */}
+      <motion.div
+        className="mb-5"
+        variants={fadeUp}
+        initial="hidden"
+        animate="show"
+        custom={0.1}
+      >
+        <div
+          className="mx-auto flex h-[120px] w-[120px] select-none items-center justify-center rounded-full border-[3px] border-white text-3xl shadow-lg"
+          style={{ background: "#cce8f4" }}>
+          🧑‍💻
         </div>
-      </div>
+      </motion.div>
+ 
+      {/* Greeting */}
+      <motion.div
+        className="mb-5 flex items-center gap-2 text-[15px] font-medium text-gray-500"
+        variants={fadeUp}
+        initial="hidden"
+        animate="show"
+        custom={0.22}
+      >
+        <span>Hi, I&apos;m Oguz</span>
+        <span className="text-xl" role="img" aria-label="rock on">🤙</span>
+      </motion.div>
+ 
+      {/* Headline */}
+      <motion.h1
+        className="mb-6 max-w-2xl text-[52px] font-extrabold leading-[1.08] text-gray-900 md:text-[62px]"
+        style={{ letterSpacing: "-0.025em" }}
+        variants={fadeUp}
+        initial="hidden"
+        animate="show"
+        custom={0.36}
+      >
+        Building digital<br />
+        products, brands, and<br />
+        experience.
+      </motion.h1>
+ 
+      {/* Sub-copy */}
+      <motion.p
+        className="mb-10 max-w-xs text-[14px] leading-relaxed text-gray-400"
+        variants={fadeUp}
+        initial="hidden"
+        animate="show"
+        custom={0.5}
+      >
+        a <strong className="font-semibold text-gray-800">Product Designer</strong>{" "}
+        and <strong className="font-semibold text-gray-800">Visual Developer</strong> in SF.
+        <br />I specialize in UI/UX Design, Responsive Web Design,
+        <br />and Visual Development.
+      </motion.p>
+ 
+      {/* CTA */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        animate="show"
+        custom={0.64}
+      >
+        <Link
+          href="#contact"
+          className="inline-block rounded-full bg-gray-900 px-9 py-4 text-[11px] font-bold uppercase tracking-[0.22em] text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-700 hover:shadow-xl active:scale-[0.97]"
+        >
+          Connect with me
+        </Link>
+      </motion.div>
     </section>
   );
 }

@@ -1,17 +1,17 @@
 import { Button } from "@/components/ui/button";
 
-type Post = {
-    id: string;
-    title: string;
-    views: string;
-}
+// type Post = {
+//     id: string;
+//     title: string;
+//     views: string;
+// }
 
-async function getPosts() : Promise<Post[]> {
-    const res = await fetch('http:localhost:3001/posts');
-    const posts = (await res.json()) as Post[];
+// async function getPosts() : Promise<Post[]> {
+//     const res = await fetch('http:localhost:3001/posts');
+//     const posts = (await res.json()) as Post[];
 
-    return posts
-}
+//     return posts
+// }
 
 export default async function Fetching () {
     
@@ -21,13 +21,13 @@ export default async function Fetching () {
     return (
         <div>
             <h1>Fetching Data</h1>
-            {posts.map((post) => (
+            {/* {posts.map((post) => (
                 <article key={post.id}>
                     <h1>{post.title}</h1>
                     <p>{post.views}</p>
                     <Button>Click me</Button>
                 </article>
-            ))}
+            ))} */}
         </div>
     );
 }

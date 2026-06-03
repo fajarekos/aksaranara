@@ -15,8 +15,8 @@ import { Button } from "@/components/ui/button";
 
 export default async function Fetching () {
     
-    const posts = await getPosts();
-    console.log(posts)  
+    // const posts = await getPosts();
+    // console.log(posts)  
 
     return (
         <div>

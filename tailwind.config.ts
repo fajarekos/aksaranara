@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
+        raleway: ["var(--font-raleway)", "sans-serif"],
       },
       colors: {
         brand: {

@@ -1,9 +1,10 @@
 import { Navbar } from "@/components/Navbar";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { ExperienceSection } from "@/components/sections/ExperienceSection";
+// import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { SkillSection } from "@/components/sections/SkillSection";
 import { WorkExperienceSection } from "@/components/sections/WorkExperienceSection";
+import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <Navbar />
       <main>
         <AboutSection />
-        <ExperienceSection />
+        <ExperienceTimeline />
         <SkillSection />
         <WorkExperienceSection />
         <ContactSection />

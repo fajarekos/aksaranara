@@ -178,7 +178,7 @@ export function ExperienceTimeline() {
                 </motion.h2>
                 <div>
                 {steps.map((step, index) => (
-                    <StepCard key={step.id} step={step} index={index} />
+                    <StepCard key={step.id} step={step} index={index} isLast={index === steps.length - 1} />
                 ))}
                 </div>
             </div>

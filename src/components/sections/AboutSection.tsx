@@ -8,7 +8,7 @@ export function AboutSection() {
   return (
     <section 
       id="about"
-      className="relative flex min-h-screen flex-col items-center justify-center px-6 pb-16 pt-24 text-center">
+      className="relative flex min-h-screen flex-col items-center justify-center px-6 pb-10 pt-18 text-center">
  
   
       {/* Avatar */}
@@ -34,21 +34,21 @@ export function AboutSection() {
         animate="show"
         custom={0.22}
       >
-        <span>Hi, I&apos;m Oguz</span>
+        <span>Hi, I&apos;m Fajar Eko Susilo</span>
         <span className="text-xl" role="img" aria-label="rock on">🤙</span>
       </motion.div>
  
       {/* Headline */}
       <motion.h1
-        className="mb-6 max-w-2xl text-[52px] font-extrabold leading-[1.08] text-gray-900 md:text-[62px]"
+        className="mb-6 max-w-2xl text-[48px] font-extrabold leading-[1.08] text-gray-900 md:text-[48px]"
         style={{ letterSpacing: "-0.025em" }}
         variants={fadeUp}
         initial="hidden"
         animate="show"
         custom={0.36}
       >
-        Building digital<br />
-        products, brands, and<br />
+        Frontend & AI Enthusiatic <br />
+        Ex Product Manager<br />
         experience.
       </motion.h1>
  
@@ -58,12 +58,10 @@ export function AboutSection() {
         variants={fadeUp}
         initial="hidden"
         animate="show"
-        custom={0.5}
-      >
-        a <strong className="font-semibold text-gray-800">Product Designer</strong>{" "}
-        and <strong className="font-semibold text-gray-800">Visual Developer</strong> in SF.
-        <br />I specialize in UI/UX Design, Responsive Web Design,
-        <br />and Visual Development.
+        custom={0.5}>
+
+        I design and build intelligent, user-focused products.
+        I think like a <strong className="font-semibold text-gray-800">Product Manager</strong>, code like a <strong className="font-semibold text-gray-800">Developer</strong>, design like a craft.
       </motion.p>
  
       {/* CTA */}
